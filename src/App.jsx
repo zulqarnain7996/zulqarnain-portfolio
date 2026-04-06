@@ -4,23 +4,33 @@ import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { NavBar } from './components/NavBar'
 import { Projects } from './components/Projects'
-import { Services } from './components/Services'
 import { Skills } from './components/Skills'
 
 function App() {
   return (
-    <div className="site-shell">
-      <div className="site-aurora" aria-hidden="true" />
-      <div className="site-grid" aria-hidden="true" />
+    <div className="page-shell">
+      <div className="ambient ambient-aurora" aria-hidden="true" />
+      <div className="ambient ambient-grid" aria-hidden="true" />
+      <div className="ambient ambient-noise" aria-hidden="true" />
+      <div className="ambient ambient-vignette" aria-hidden="true" />
+      <div className="ambient ambient-spotlight" aria-hidden="true" />
+      <div className="ambient ambient-particles" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+
       <NavBar />
-      <main>
+
+      <main className="page-main">
         <Hero />
         <About />
-        <Skills />
-        <Services />
         <Projects />
+        <Skills />
         <Contact />
       </main>
+
       <Footer />
     </div>
   )

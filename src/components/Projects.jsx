@@ -1,40 +1,50 @@
 import { projects } from '../data/content'
-import { SectionHeading } from './SectionHeading'
 
 export function Projects() {
   return (
-    <section className="section projects-section" id="projects">
-      <SectionHeading
-        label="Featured Projects"
-        title="Selected builds across education, operations, and scheduling."
-        text="A few projects that reflect structured, product-minded execution."
-      />
+    <section className="projects section" id="projects">
+      <div className="section-intro reveal">
+        <span className="eyebrow">Selected Work</span>
+        <h2>Three flagship builds presented like high-value case studies.</h2>
+        <p>
+          Strong hierarchy, shorter copy, and visuals that feel more like product artifacts
+          than ordinary portfolio thumbnails.
+        </p>
+      </div>
 
-      <div className="projects-stack">
+      <div className="projects-list">
         {projects.map((project, index) => (
           <article
             key={project.title}
-            className={`project-card reveal ${index > 0 ? 'reveal-delay' : ''}`}
+            className={`project-showcase project-variant-${(index % 3) + 1} ${
+              index % 2 === 1 ? 'project-showcase-reverse' : ''
+            } reveal`}
           >
             <div className="project-visual">
-              <span className="project-index">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <img src={project.image} alt={`${project.title} placeholder visual`} />
+              <span className="project-id">{project.id}</span>
+              <div className="project-visual-frame">
+                <img src={project.image} alt={`${project.title} preview`} />
+              </div>
             </div>
 
-            <div className="project-content">
-              <span className="project-tag">{project.tag}</span>
+            <div className="project-copy">
+              <span className="project-category">{project.category}</span>
               <h3>{project.title}</h3>
               <p>{project.summary}</p>
-              <ul>
-                {project.details.map((detail) => (
-                  <li key={detail}>{detail}</li>
+
+              <div className="project-detail-grid">
+                {project.highlights.map((item) => (
+                  <span key={item} className="project-detail">
+                    {item}
+                  </span>
                 ))}
-              </ul>
-              <a className="project-linkline" href="#contact">
-                Discuss a Similar Build
-              </a>
+              </div>
+
+              <div className="project-stack">
+                {project.stack.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
+              </div>
             </div>
           </article>
         ))}

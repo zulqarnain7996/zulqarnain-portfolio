@@ -1,88 +1,118 @@
-import { ArrowIcon, SocialIcon } from './Icons'
-import { heroMetrics, owner, profileImages, socialLinks } from '../data/content'
+import { heroMetrics, heroPills, owner, profileImages } from '../data/content'
 
 export function Hero() {
   return (
     <section className="hero section" id="hero">
       <div className="hero-copy reveal">
-        <span className="hero-kicker">Premium Full Stack Engineering</span>
-        <div className="hero-intent-line" aria-hidden="true">
-          <span />
-          <p>Software engineer brand site</p>
-        </div>
-        <h1>
-          {owner.name}
-          <span>{owner.title}</span>
-        </h1>
-        <p className="hero-intro">{owner.intro}</p>
+        <div className="hero-copy-frame">
+          <div className="eyebrow-row">
+            <span className="eyebrow">Elite Software Engineer Brand</span>
+            <span className="status-pill">{owner.availability}</span>
+          </div>
 
-        <div className="hero-actions">
-          <a className="button button-solid" href="#projects">
-            View Selected Work
-          </a>
-          <a className="button button-outline" href={`mailto:${owner.email}`}>
-            Start a Conversation
-          </a>
-        </div>
+          <div className="hero-heading-orbit" aria-hidden="true">
+            <span />
+            <span />
+          </div>
 
-        <div className="hero-socials" aria-label="Social links">
-          {socialLinks.map((link) => (
-            <a
-              key={link.label}
-              className="social-pill"
-              href={link.href}
-              aria-label={link.label}
-            >
-              <SocialIcon name={link.icon} />
-              <span>{link.label}</span>
+          <h1 className="hero-title">
+            <span className="hero-title-name">{owner.name}</span>
+            <small>{owner.title}</small>
+          </h1>
+
+          <p className="hero-statement">{owner.heroStatement}</p>
+          <p className="hero-summary">{owner.heroSummary}</p>
+
+          <div className="hero-actions">
+            <a className="hero-action hero-action-primary" href="#projects">
+              <span className="hero-action-label">Selected Work</span>
+              <strong>Explore flagship builds</strong>
             </a>
+            <a className="hero-action hero-action-secondary" href={`mailto:${owner.email}`}>
+              <span className="hero-action-label">Start a conversation</span>
+              <strong>{owner.email}</strong>
+            </a>
+          </div>
+
+          <div className="hero-pill-row" aria-label="Core stack">
+            {heroPills.map((pill) => (
+              <span key={pill} className="hero-pill">
+                {pill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="hero-metrics">
+          {heroMetrics.map((metric) => (
+            <article key={metric.label} className="hero-metric">
+              <strong>{metric.value}</strong>
+              <span>{metric.label}</span>
+            </article>
           ))}
         </div>
       </div>
 
       <div className="hero-stage reveal reveal-delay">
-        <div className="hero-stage-backdrop" aria-hidden="true" />
-        <div className="hero-orb hero-orb-one" aria-hidden="true" />
-        <div className="hero-orb hero-orb-two" aria-hidden="true" />
-        <div className="hero-orb hero-orb-three" aria-hidden="true" />
-        <div className="hero-stage-grid" aria-hidden="true" />
+        <div className="hero-stage-frame">
+          <div className="hero-stage-backlight" aria-hidden="true" />
+          <div className="hero-stage-mesh" aria-hidden="true" />
+          <div className="hero-stage-sheen" aria-hidden="true" />
+          <div className="hero-stage-noise" aria-hidden="true" />
+          <div className="hero-grid" aria-hidden="true" />
+          <div className="hero-beam hero-beam-a" aria-hidden="true" />
+          <div className="hero-beam hero-beam-b" aria-hidden="true" />
+          <div className="hero-ribbon hero-ribbon-a" aria-hidden="true" />
+          <div className="hero-ribbon hero-ribbon-b" aria-hidden="true" />
+          <div className="hero-halo hero-halo-a" aria-hidden="true" />
+          <div className="hero-halo hero-halo-b" aria-hidden="true" />
+          <div className="hero-orbit hero-orbit-a" aria-hidden="true" />
+          <div className="hero-orbit hero-orbit-b" aria-hidden="true" />
+          <div className="hero-arc hero-arc-a" aria-hidden="true" />
+          <div className="hero-arc hero-arc-b" aria-hidden="true" />
 
-        <div className="hero-portrait-frame">
-          <div className="hero-portrait-ring" aria-hidden="true" />
-          <div className="hero-portrait-shine" aria-hidden="true" />
-          <img
-            src={profileImages.hero}
-            alt="Portrait of Zulqarnain Haider"
-            className="hero-portrait"
-          />
-        </div>
+          <div className="hero-card hero-card-top">
+            <span className="card-label">Experience</span>
+            <strong>{owner.experience}</strong>
+            <p>Delivering full stack systems with premium product feel.</p>
+          </div>
 
-        <div className="hero-floating-card hero-floating-top">
-          <span>{owner.experience}</span>
-          <strong>Hands-on product development</strong>
-        </div>
+          <div className="hero-portrait-echo" aria-hidden="true">
+            <img
+              className="hero-portrait hero-portrait-secondary"
+              src={profileImages.secondary}
+              alt=""
+            />
+          </div>
 
-        <div className="hero-floating-card hero-floating-side">
-          <span>Stack</span>
-          <strong>Laravel, React, Python, REST APIs</strong>
-        </div>
+          <div className="hero-portrait-shell">
+            <div className="hero-portrait-border" aria-hidden="true" />
+            <div className="hero-portrait-glow" aria-hidden="true" />
+            <div className="hero-portrait-sheen" aria-hidden="true" />
+            <div className="hero-portrait-caption" aria-hidden="true">
+              <span>Zulqarnain Haider</span>
+              <strong>Full Stack Software Engineer</strong>
+            </div>
+            <img
+              className="hero-portrait"
+              src={profileImages.primary}
+              alt="Portrait of Zulqarnain Haider"
+            />
+          </div>
 
-        <a className="hero-floating-card hero-floating-bottom" href="#services">
-          <div>
-            <span>Services</span>
+          <div className="hero-card hero-card-side">
+            <span className="card-label">Core Focus</span>
             <strong>Web apps, APIs, AI integrations</strong>
           </div>
-          <ArrowIcon />
-        </a>
-      </div>
 
-      <div className="hero-metrics reveal reveal-delay-2">
-        {heroMetrics.map((metric) => (
-          <article key={metric.label} className="metric-item">
-            <strong>{metric.value}</strong>
-            <span>{metric.label}</span>
-          </article>
-        ))}
+          <div className="hero-card hero-card-bottom">
+            <span className="card-label">Execution</span>
+            <strong>Laravel, React, Python</strong>
+            <p>From architecture to shipping polish.</p>
+          </div>
+
+          <div className="hero-runway" aria-hidden="true" />
+        </div>
       </div>
     </section>
   )

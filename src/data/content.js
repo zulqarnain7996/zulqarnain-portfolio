@@ -1,130 +1,124 @@
-import profileImage from '../assets/images/profile.jpg.jpeg'
-import profileImageSecondary from '../assets/images/profile1.jpg.jpeg'
-import lmsPlaceholder from '../assets/images/project-lms.svg'
-import attendProPlaceholder from '../assets/images/project-attendpro.svg'
-import quranPlaceholder from '../assets/images/project-quran.svg'
+import profilePrimary from '../assets/images/profile.jpg.jpeg'
+import profileSecondary from '../assets/images/profile1.jpg.jpeg'
+import projectLms from '../assets/images/project-lms.svg'
+import projectAttendPro from '../assets/images/project-attendpro.svg'
+import projectQuran from '../assets/images/project-quran.svg'
 
 export const owner = {
   name: 'Zulqarnain Haider',
   title: 'Full Stack Software Engineer',
   experience: '5+ years',
   email: 'Zulqarnain7996@gmail.com',
-  company: 'IVS',
-  intro: 'Building sharp web products with clean systems and reliable delivery.',
+  availability: 'Available for ambitious web products',
+  heroStatement: 'Elegant software systems with cinematic execution.',
+  heroSummary:
+    'I design and ship premium web experiences, robust backend systems, and AI-enhanced product flows with clean architecture and sharp visual taste.',
 }
 
 export const navigationItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Stack', href: '#skills' },
-  { label: 'Services', href: '#services' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Work', href: '#projects' },
+  { label: 'Expertise', href: '#expertise' },
+  { label: 'Craft', href: '#craft' },
   { label: 'Contact', href: '#contact' },
 ]
 
-export const socialLinks = [
-  { label: 'GitHub', href: '#', icon: 'github' },
-  { label: 'LinkedIn', href: '#', icon: 'linkedin' },
-]
+export const heroPills = ['Laravel', 'React', 'Python', 'REST APIs', 'AI Integrations']
 
 export const heroMetrics = [
-  { value: '5+', label: 'Years of experience' },
-  { value: 'Full Stack', label: 'Frontend to backend' },
-  { value: 'IVS', label: 'Company experience' },
+  { value: '05+', label: 'Years in delivery' },
+  { value: '03', label: 'Flagship systems' },
+  { value: 'Full stack', label: 'Frontend to backend' },
 ]
 
-export const profileImages = {
-  hero: profileImage,
-  workspace: profileImageSecondary,
-}
-
-export const aboutHighlights = [
+export const spotlightCards = [
   {
-    title: 'Backend clarity',
-    text: 'Clean APIs and stable systems.',
+    label: 'Precision Build',
+    title: 'Web apps shaped for longevity',
+    text: 'Structured products with durable architecture, refined interfaces, and pragmatic engineering decisions.',
   },
   {
-    title: 'Frontend polish',
-    text: 'Responsive interfaces with a sharp feel.',
+    label: 'Systems Thinking',
+    title: 'APIs that stay clear under scale',
+    text: 'Backend design focused on clean contracts, reliable data flow, and maintenance without friction.',
   },
   {
-    title: 'Product focus',
-    text: 'Built for users, business, and longevity.',
+    label: 'Modern Delivery',
+    title: 'AI integrations with product sense',
+    text: 'Useful automation and intelligent workflows added where they create leverage, not noise.',
   },
 ]
 
-export const skillColumns = [
+export const stackGroups = [
   {
-    heading: 'Backend',
-    lead: 'API and application engineering',
-    items: ['Laravel', 'PHP', 'Flask', 'Django', 'Python', 'REST APIs'],
+    title: 'Backend Core',
+    items: ['Laravel', 'PHP', 'Flask', 'Django', 'Python'],
   },
   {
-    heading: 'Frontend',
-    lead: 'Modern interface delivery',
-    items: ['React', 'Responsive UI', 'Component Architecture', 'Vite'],
+    title: 'Frontend Layer',
+    items: ['React', 'Vite', 'Responsive UI', 'Component Systems'],
   },
   {
-    heading: 'Data & Delivery',
-    lead: 'Structured systems and deployment',
-    items: ['MySQL', 'SQL', 'GitHub', 'Vercel', 'Database Design'],
+    title: 'Data + APIs',
+    items: ['REST APIs', 'MySQL', 'SQL', 'Integrations'],
   },
 ]
 
 export const services = [
-  {
-    index: '01',
-    title: 'Web App Development',
-    description: 'Custom products with clean architecture and refined UX.',
-  },
-  {
-    index: '02',
-    title: 'API Development',
-    description: 'Reliable APIs for integrations, automation, and scale.',
-  },
-  {
-    index: '03',
-    title: 'AI Integrations',
-    description: 'Practical AI features integrated into real product workflows.',
-  },
-  {
-    index: '04',
-    title: 'Full Stack Development',
-    description: 'Joined-up execution across frontend, backend, and data.',
-  },
+  'Web app development',
+  'API architecture',
+  'AI integrations',
+  'Full stack delivery',
 ]
 
 export const projects = [
   {
+    id: '01',
     title: 'Learning Management System',
-    tag: 'Education Platform',
-    image: lmsPlaceholder,
-    summary: 'A learning platform for delivery, progress, and administration.',
-    details: [
-      'Role-aware user flows',
-      'Structured course management',
-      'Scalable backend foundation',
-    ],
+    category: 'Education Platform',
+    image: projectLms,
+    summary: 'A structured learning environment designed for delivery, management, and progress visibility.',
+    highlights: ['Role-based flows', 'Course operations', 'Scalable backend foundation'],
+    stack: ['Laravel', 'PHP', 'MySQL'],
   },
   {
+    id: '02',
     title: 'IVS AttendPro',
-    tag: 'Attendance Product',
-    image: attendProPlaceholder,
-    summary: 'An attendance system for visibility, tracking, and reporting.',
-    details: [
-      'Daily attendance workflows',
-      'Clear operational reporting',
-      'Built for maintainability',
-    ],
+    category: 'Attendance Product',
+    image: projectAttendPro,
+    summary: 'An attendance platform with clean tracking, operational clarity, and dependable reporting workflows.',
+    highlights: ['Attendance pipelines', 'Operational reporting', 'Maintainable product logic'],
+    stack: ['Laravel', 'REST APIs', 'SQL'],
   },
   {
+    id: '03',
     title: 'Quran Scheduling Project',
-    tag: 'Scheduling System',
-    image: quranPlaceholder,
-    summary: 'A scheduling system for planning and recurring sessions.',
-    details: [
-      'Recurring scheduling logic',
-      'Availability and assignment handling',
-      'Simple coordination flow',
-    ],
+    category: 'Scheduling System',
+    image: projectQuran,
+    summary: 'A recurring scheduling system built to coordinate sessions, availability, and assignment logic smoothly.',
+    highlights: ['Recurring schedule logic', 'Assignment handling', 'Simple coordination UX'],
+    stack: ['Django', 'Python', 'MySQL'],
   },
 ]
+
+export const craftPrinciples = [
+  {
+    index: 'A1',
+    title: 'Compose for impact',
+    text: 'The interface should feel intentional before a single line is read.',
+  },
+  {
+    index: 'A2',
+    title: 'Engineer for clarity',
+    text: 'Architecture, naming, and data flow stay sharp enough to scale without chaos.',
+  },
+  {
+    index: 'A3',
+    title: 'Polish the interaction',
+    text: 'Motion, spacing, and hierarchy are treated like product features, not decoration.',
+  },
+]
+
+export const profileImages = {
+  primary: profilePrimary,
+  secondary: profileSecondary,
+}

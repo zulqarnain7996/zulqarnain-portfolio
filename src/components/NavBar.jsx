@@ -1,14 +1,14 @@
-import { navigationItems } from '../data/content'
+import { navigationItems, owner } from '../data/content'
 
 export function NavBar() {
   return (
-    <header className="navbar-wrap">
-      <div className="navbar">
-        <a className="brand" href="#hero">
-          <span className="brand-monogram">ZH</span>
-          <span className="brand-text">
-            <strong>Zulqarnain Haider</strong>
-            <span>Engineer Portfolio</span>
+    <header className="nav-wrap">
+      <div className="nav-shell">
+        <a className="nav-brand" href="#hero" aria-label="Go to top">
+          <span className="nav-brand-mark">ZH</span>
+          <span className="nav-brand-copy">
+            <strong>{owner.name}</strong>
+            <span>{owner.title}</span>
           </span>
         </a>
 
@@ -20,8 +20,8 @@ export function NavBar() {
           ))}
         </nav>
 
-        <a className="nav-button" href="#contact">
-          Let&apos;s Build
+        <a className="nav-cta" href={`mailto:${owner.email}`}>
+          Book a Build
         </a>
       </div>
     </header>
