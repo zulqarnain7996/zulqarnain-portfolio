@@ -1,0 +1,26 @@
+<svg width="1200" height="840" viewBox="0 0 1200 840" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="840" rx="36" fill="url(#paint0_linear)"/>
+  <circle cx="970" cy="182" r="120" fill="url(#paint1_radial)" fill-opacity="0.9"/>
+  <rect x="88" y="94" width="1024" height="652" rx="28" fill="#0E1724" stroke="rgba(255,255,255,0.14)"/>
+  <rect x="140" y="146" width="310" height="548" rx="26" fill="#102031"/>
+  <rect x="488" y="146" width="572" height="168" rx="24" fill="#13263F"/>
+  <rect x="488" y="344" width="572" height="168" rx="24" fill="url(#paint2_linear)"/>
+  <rect x="488" y="542" width="176" height="110" rx="22" fill="#122438"/>
+  <rect x="692" y="542" width="176" height="110" rx="22" fill="#102031"/>
+  <rect x="896" y="542" width="164" height="110" rx="22" fill="#102031"/>
+  <text x="600" y="792" fill="#DCEBFF" font-family="Arial, sans-serif" font-size="30" text-anchor="middle">Replace with IVS AttendPro screenshot</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="70" y1="38" x2="1130" y2="812" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09121F"/>
+      <stop offset="1" stop-color="#050B13"/>
+    </linearGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(970 182) rotate(90) scale(120)">
+      <stop stop-color="#9AD8FF"/>
+      <stop offset="1" stop-color="#9AD8FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="paint2_linear" x1="488" y1="344" x2="1060" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#183350"/>
+      <stop offset="1" stop-color="#0F1F31"/>
+    </linearGradient>
+  </defs>
+</svg>
